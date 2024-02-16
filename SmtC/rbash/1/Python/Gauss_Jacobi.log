@@ -1,0 +1,530 @@
+\begin{small}
+\begin{center}\textbf{Gauss Jacobi:}\end{center}
+\[
+   \underline{\underline{A}}~\underline{x}=
+      \begin{pmatrix}
+         10.000 & 2.000 & 1.000\\
+         1.000 & 5.000 & 1.000\\
+         2.000 & 3.000 & 10.000\\
+      \end{pmatrix}
+      \underline{x}=
+      \begin{pmatrix}
+      7.000 \\ -8.000 \\ 6.000
+      \end{pmatrix}
+   =\underline{b}
+\]
+Iterations:
+\[
+   \underline{x}_{i+1}=\underline{\underline{C}}~\underline{x}_i+\underline{g},
+\]
+Where:
+\[
+      \underline{\underline{C}}=
+      \begin{pmatrix}
+         0.000 & -0.200 & -0.100\\
+         -0.200 & 0.000 & -0.200\\
+         -0.200 & -0.300 & 0.000\\
+      \end{pmatrix}
+      ;\qquad
+      \underline{g}=
+      \begin{pmatrix}
+      0.700 \\ -1.600 \\ 0.600
+      \end{pmatrix}
+      ;\qquad
+      \underline{x_0}=
+      \begin{pmatrix}
+      0.700 \\ -1.600 \\ 0.600
+      \end{pmatrix}
+\]
+Diagonally dominant: Yes
+\[
+      \underline{\alpha}=
+      \begin{pmatrix}
+      0.300 \\ 0.400 \\ 0.500
+      \end{pmatrix}
+      ;\qquad
+   ||\underline{\alpha}||=0.500000
+\]
+Iteration 0:
+\[
+\underline{x}_{0}=
+   \begin{pmatrix}
+   0.700 \\ -1.600 \\ 0.600
+   \end{pmatrix}
+;~~
+\underline{r}_{0}=
+\underline{\underline{A}}~\underline{x}_{0}-
+\underline{b}=
+   \begin{pmatrix}
+   -2.60E+00 \\ 1.30E+00 \\ -3.40E+00
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{0}
+||=
+4.25E-01
+;~~
+\]
+Iteration 1:
+\[
+\underline{x}_{1}=
+   \begin{pmatrix}
+   0.960 \\ -1.860 \\ 0.940
+   \end{pmatrix}
+;~~
+\underline{r}_{1}=
+\underline{\underline{A}}~\underline{x}_{1}-
+\underline{b}=
+   \begin{pmatrix}
+   -1.80E-01 \\ 6.00E-01 \\ -2.60E-01
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{1}
+||=
+7.50E-02
+;~~
+\]
+\[
+\underline{d}_{1}=
+\underline{x}_{1}-
+\underline{x}_{0}=
+   \begin{pmatrix}
+   2.60E-01 \\ -2.60E-01 \\ 3.40E-01
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{1}
+||=
+2.12E-01
+\]
+Iteration 2:
+\[
+\underline{x}_{2}=
+   \begin{pmatrix}
+   0.978 \\ -1.980 \\ 0.966
+   \end{pmatrix}
+;~~
+\underline{r}_{2}=
+\underline{\underline{A}}~\underline{x}_{2}-
+\underline{b}=
+   \begin{pmatrix}
+   -2.14E-01 \\ 4.40E-02 \\ -3.24E-01
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{2}
+||=
+4.05E-02
+;~~
+\]
+\[
+\underline{d}_{2}=
+\underline{x}_{2}-
+\underline{x}_{1}=
+   \begin{pmatrix}
+   1.80E-02 \\ -1.20E-01 \\ 2.60E-02
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{2}
+||=
+6.45E-02
+\]
+Iteration 3:
+\[
+\underline{x}_{3}=
+   \begin{pmatrix}
+   0.999 \\ -1.989 \\ 0.998
+   \end{pmatrix}
+;~~
+\underline{r}_{3}=
+\underline{\underline{A}}~\underline{x}_{3}-
+\underline{b}=
+   \begin{pmatrix}
+   1.48E-02 \\ 5.38E-02 \\ 1.64E-02
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{3}
+||=
+6.72E-03
+;~~
+\]
+\[
+\underline{d}_{3}=
+\underline{x}_{3}-
+\underline{x}_{2}=
+   \begin{pmatrix}
+   2.14E-02 \\ -8.80E-03 \\ 3.24E-02
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{3}
+||=
+1.64E-02
+\]
+Iteration 4:
+\[
+\underline{x}_{4}=
+   \begin{pmatrix}
+   0.998 \\ -2.000 \\ 0.997
+   \end{pmatrix}
+;~~
+\underline{r}_{4}=
+\underline{\underline{A}}~\underline{x}_{4}-
+\underline{b}=
+   \begin{pmatrix}
+   -2.32E-02 \\ -3.12E-03 \\ -3.52E-02
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{4}
+||=
+4.41E-03
+;~~
+\]
+\[
+\underline{d}_{4}=
+\underline{x}_{4}-
+\underline{x}_{3}=
+   \begin{pmatrix}
+   -1.48E-03 \\ -1.08E-02 \\ -1.64E-03
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{4}
+||=
+5.41E-03
+\]
+Iteration 5:
+\[
+\underline{x}_{5}=
+   \begin{pmatrix}
+   1.000 \\ -1.999 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{5}=
+\underline{\underline{A}}~\underline{x}_{5}-
+\underline{b}=
+   \begin{pmatrix}
+   4.77E-03 \\ 5.84E-03 \\ 6.50E-03
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{5}
+||=
+8.13E-04
+;~~
+\]
+\[
+\underline{d}_{5}=
+\underline{x}_{5}-
+\underline{x}_{4}=
+   \begin{pmatrix}
+   2.32E-03 \\ 6.24E-04 \\ 3.52E-03
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{5}
+||=
+1.76E-03
+\]
+Iteration 6:
+\[
+\underline{x}_{6}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{6}=
+\underline{\underline{A}}~\underline{x}_{6}-
+\underline{b}=
+   \begin{pmatrix}
+   -2.99E-03 \\ -1.13E-03 \\ -4.46E-03
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{6}
+||=
+5.57E-04
+;~~
+\]
+\[
+\underline{d}_{6}=
+\underline{x}_{6}-
+\underline{x}_{5}=
+   \begin{pmatrix}
+   -4.77E-04 \\ -1.17E-03 \\ -6.50E-04
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{6}
+||=
+5.84E-04
+\]
+Iteration 7:
+\[
+\underline{x}_{7}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{7}=
+\underline{\underline{A}}~\underline{x}_{7}-
+\underline{b}=
+   \begin{pmatrix}
+   8.97E-04 \\ 7.44E-04 \\ 1.27E-03
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{7}
+||=
+1.59E-04
+;~~
+\]
+\[
+\underline{d}_{7}=
+\underline{x}_{7}-
+\underline{x}_{6}=
+   \begin{pmatrix}
+   2.99E-04 \\ 2.26E-04 \\ 4.46E-04
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{7}
+||=
+2.23E-04
+\]
+Iteration 8:
+\[
+\underline{x}_{8}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{8}=
+\underline{\underline{A}}~\underline{x}_{8}-
+\underline{b}=
+   \begin{pmatrix}
+   -4.25E-04 \\ -2.17E-04 \\ -6.26E-04
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{8}
+||=
+7.83E-05
+;~~
+\]
+\[
+\underline{d}_{8}=
+\underline{x}_{8}-
+\underline{x}_{7}=
+   \begin{pmatrix}
+   -8.97E-05 \\ -1.49E-04 \\ -1.27E-04
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{8}
+||=
+7.45E-05
+\]
+Iteration 9:
+\[
+\underline{x}_{9}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{9}=
+\underline{\underline{A}}~\underline{x}_{9}-
+\underline{b}=
+   \begin{pmatrix}
+   1.49E-04 \\ 1.05E-04 \\ 2.15E-04
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{9}
+||=
+2.69E-05
+;~~
+\]
+\[
+\underline{d}_{9}=
+\underline{x}_{9}-
+\underline{x}_{8}=
+   \begin{pmatrix}
+   4.25E-05 \\ 4.34E-05 \\ 6.26E-05
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{9}
+||=
+3.13E-05
+\]
+Iteration 10:
+\[
+\underline{x}_{10}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{10}=
+\underline{\underline{A}}~\underline{x}_{10}-
+\underline{b}=
+   \begin{pmatrix}
+   -6.36E-05 \\ -3.65E-05 \\ -9.30E-05
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{10}
+||=
+1.16E-05
+;~~
+\]
+\[
+\underline{d}_{10}=
+\underline{x}_{10}-
+\underline{x}_{9}=
+   \begin{pmatrix}
+   -1.49E-05 \\ -2.10E-05 \\ -2.15E-05
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{10}
+||=
+1.08E-05
+\]
+Iteration 11:
+\[
+\underline{x}_{11}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{11}=
+\underline{\underline{A}}~\underline{x}_{11}-
+\underline{b}=
+   \begin{pmatrix}
+   2.39E-05 \\ 1.57E-05 \\ 3.46E-05
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{11}
+||=
+4.32E-06
+;~~
+\]
+\[
+\underline{d}_{11}=
+\underline{x}_{11}-
+\underline{x}_{10}=
+   \begin{pmatrix}
+   6.36E-06 \\ 7.29E-06 \\ 9.30E-06
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{11}
+||=
+4.65E-06
+\]
+Iteration 12:
+\[
+\underline{x}_{12}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{12}=
+\underline{\underline{A}}~\underline{x}_{12}-
+\underline{b}=
+   \begin{pmatrix}
+   -9.72E-06 \\ -5.85E-06 \\ -1.42E-05
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{12}
+||=
+1.77E-06
+;~~
+\]
+\[
+\underline{d}_{12}=
+\underline{x}_{12}-
+\underline{x}_{11}=
+   \begin{pmatrix}
+   -2.39E-06 \\ -3.13E-06 \\ -3.46E-06
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{12}
+||=
+1.73E-06
+\]
+Iteration 13:
+\[
+\underline{x}_{13}=
+   \begin{pmatrix}
+   1.000 \\ -2.000 \\ 1.000
+   \end{pmatrix}
+;~~
+\underline{r}_{13}=
+\underline{\underline{A}}~\underline{x}_{13}-
+\underline{b}=
+   \begin{pmatrix}
+   3.76E-06 \\ 2.39E-06 \\ 5.45E-06
+   \end{pmatrix}
+;~~
+||
+\underline{r}_{13}
+||=
+6.82E-07
+;~~
+\]
+\[
+\underline{d}_{13}=
+\underline{x}_{13}-
+\underline{x}_{12}=
+   \begin{pmatrix}
+   9.72E-07 \\ 1.17E-06 \\ 1.42E-06
+   \end{pmatrix}
+;~~
+||
+\underline{d}_{13}
+||=
+7.08E-07
+\]
+Convergence, 13 iterations: 7.1E-07<1.0E-06
+\[
+   \underline{\underline{A}}~\underline{x}^*-\underline{b}=
+      \begin{pmatrix}
+         10.000 & 2.000 & 1.000\\
+         1.000 & 5.000 & 1.000\\
+         2.000 & 3.000 & 10.000\\
+      \end{pmatrix}
+      \begin{pmatrix}
+      1.000 \\ -2.000 \\ 1.000
+      \end{pmatrix}
+   -
+      \begin{pmatrix}
+      7.000 \\ -8.000 \\ 6.000
+      \end{pmatrix}
+   =
+      \begin{pmatrix}
+      0.000 \\ 0.000 \\ 0.000
+      \end{pmatrix}
+\]
+\[
+   \underline{x}^*=
+      \begin{pmatrix}
+      1.0E+00 \\ -2.0E+00 \\ 1.0E+00
+      \end{pmatrix}
+   ;\qquad
+      \underline{r}=
+      \begin{pmatrix}
+      3.8E-06 \\ 2.4E-06 \\ 5.5E-06
+      \end{pmatrix}
+   ;\qquad
+   ||r||=6.8E-07
+\]
+\end{small}

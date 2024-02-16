@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+  \tikzmath
+  {
+     \r=3;
+     \size=0.25;
+     \tpos=1.1;
+  }
+  
+  \coordinate (O) at (0,0);
+  
+  \coordinate (u0)    at (20:\r);
+  \coordinate (u1)   at (110:\r);
+  \coordinate (u2)  at (200:\r);
+  \coordinate (u3) at (290:\r);
+  
+  \foreach \u in {u0,u1,u2,u3}
+  {  
+    \draw[-latex] (O) -- (\u);
+  }
+  
+  \node at ($(O)!\tpos!(u0)$)    { $\underline{u}$ };
+  \node at ($(O)!\tpos!(u1)$)   { $\underline{\widehat u}$ };
+  \node at ($(O)!\tpos!(u2)$)  { $\underline{\widehat{\widehat u}}$ };
+  \node at ($(O)!\tpos!(u3)$) { $\underline{\widehat{\widehat{\widehat u}}}$ };
+
+  \tkzMarkRightAngle[size=\size,arrows=-latex](u0,O,u1);
+  \tkzMarkRightAngle[size=\size,arrows=-latex](u1,O,u2);
+  \tkzMarkRightAngle[size=\size,arrows=-latex](u2,O,u3);
+  \tkzMarkRightAngle[size=\size,arrows=-latex](u3,O,u0);
+\end{tikzpicture}

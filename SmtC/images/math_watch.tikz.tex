@@ -1,0 +1,33 @@
+\begin{tikzpicture}
+  \tikzmath
+  {
+     \R=3;
+     \FrameSize=\R;
+     \NumPos=0.925*\R;
+     \ArrowSize=0.85*\R;
+     \dAngle=360/12;
+  }
+  
+   \filldraw [white]
+   (\FrameSize,\FrameSize)
+   --
+   (-\FrameSize,\FrameSize)
+   --
+   (-\FrameSize,-\FrameSize)
+   --
+   (\FrameSize,-\FrameSize)
+   -- cycle;
+  
+   \coordinate (O) at (0,0);
+
+   \filldraw (O) circle(1pt);
+   \foreach \n in {1,...,12}
+   {
+       \tikzmath{ \Angle=\n*\dAngle; }
+       
+       \draw[-Latex,very thin,gray] (O) -- (\Angle:\ArrowSize);
+       \draw (\Angle:\NumPos) node {\n};
+   }
+
+   \draw (O) circle(\R);
+\end{tikzpicture}

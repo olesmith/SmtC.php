@@ -1,0 +1,49 @@
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{xifthen}
+
+\usepackage{amssymb,amsmath,amsthm}
+
+\usepackage{pgfplots}
+
+
+\usepackage{pgf,pgffor}
+
+
+\newcommand{\Vector}[1]{\underline{\mathbf{#1}}}%\Vector{a}
+\newcommand{\Matrix}[1]{\underline{\underline{{\mathbf{#1}}}}}
+
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usetikzlibrary
+    {
+      shapes.geometric,
+      arrows,
+      calc,
+      intersections,
+      arrows.meta,
+      decorations.markings,
+      positioning,
+      math,
+      angles,
+      quotes,
+      patterns,3d,
+      backgrounds,
+      fillbetween
+    }
+
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+  \pgfmathparse{#2/28.4527} \let#2\pgfmathresult;
+  \pgfmathparse{#3/28.4527} \let#3\pgfmathresult;
+}
+\makeatother
+\pgfplotsset{compat=1.14}
+
+

@@ -1,0 +1,381 @@
+\documentclass[letterpaper,twopage]{article}
+
+\usepackage[hypcap]{caption}
+\usepackage{mathtools}
+\usepackage{times}
+\usepackage{fancyhdr}
+\usepackage[pdftex]{graphics}
+\usepackage{latexsym}
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage{ifthen}
+\usepackage{xifthen}
+\usepackage{numprint}
+
+\usepackage{lipsum}
+\usepackage{listings}
+\lstset{ 
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  %keywordstyle=\color{blue},       % keyword style
+  language=Tex,                    % the language of the code
+}
+\usepackage{cancel}
+\usepackage{enumerate}
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  paperwidth=21cm,
+  paperheight=35cm,
+  headheight=2.5cm,
+  total=21cm,
+  left=3cm,
+  right=0cm,
+  top=3cm,
+  headsep=0.5cm,
+  hoffset=-1.5cm,
+  bottom=3cm,
+}
+\usepackage{float}
+
+\setlength{\parindent}{0cm}
+
+\DeclareMathOperator{\Arccos}{Arccos}
+\DeclareMathOperator{\Arcsin}{Arcsin}
+\DeclareMathOperator{\Arctan}{Arctan}
+\DeclareMathOperator{\Arccot}{Arccot}
+
+\DeclareMathOperator{\Arcosh}{Arcosh}
+\DeclareMathOperator{\Arsinh}{Arsinh}
+\DeclareMathOperator{\Artanh}{Artanh}
+\DeclareMathOperator{\Arcoth}{Arcoth}
+
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Det}{Det}
+\DeclareMathOperator{\Trace}{Tr}
+\DeclareMathOperator{\Ger}{span}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Dim}{dim}
+
+
+\newtheorem{Axiom}{Axioma}
+\newtheorem{Theorem}{Teorema}[section]
+\newtheorem
+    {Definition}
+    [Theorem]
+    {Definição}
+\newtheorem
+    {Proposition}
+    [Theorem]
+    {Proposição}
+\newtheorem
+    {Corollary}
+    [Theorem]
+    {Corolário}
+\newtheorem
+    {Lemma}
+    [Theorem]
+    {Lema}
+
+\newtheorem
+    {Comment}
+    [Theorem]
+    {Comment}
+\newtheorem
+    {Observation}
+    [Theorem]
+    {Observação}
+    
+\numberwithin{equation}{section}
+
+\lhead{\includegraphics*{/var/www/icons/ufg2.png}}
+\rhead{\includegraphics*{/var/www/icons/SAdE_owl.png}}
+
+\chead{
+%   \small{
+      \textbf{
+	  \begin{Large}Dr. Ole Peter Smith\end{Large}\\
+          Instituto de Matem\'atica e Estat\'{\i}stica\\
+          Universidade Federal de Goi\'as\\
+      \begin{small}ole@ufg.br - http://www.olesmith.com.br\end{small}
+      }
+%   }
+}
+
+\lfoot{\large{$\mu$}\small{$\alpha\tau\epsilon\mu\alpha\tau\iota\kappa\alpha$\\
+              \textbf{Made in \LaTeX}\\\today}}
+\rfoot{\small{\textbf{
+ %  \input{Ditado.txt}
+}}}
+\pagestyle{fancy}
+
+\newcommand{\Vector}[1]{\underline{\mathbf{#1}}}%\Vector{a}
+\newcommand{\Matrix}[1]{\underline{\underline{{\mathbf{#1}}}}}
+
+\newcommand{\Result}[1]{\underline{\underline{~~#1~~}}}
+\newcommand{\Wronsky}[2]
+{
+   \left|\begin{array}{cc}
+      #1(t)  & #2(t)\\
+      #1'(t) & #2'(t)
+   \end{array}\right|
+}
+\newcommand{\IntegralZero}[2]
+{
+   \int \frac{1}{#1(t)^2} e^{-#2(t) } dt
+}
+\newcommand{\Integral}[3]
+{
+   \int \frac{#1(t) #2(t) }{#3(t)} dt
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+\usetikzlibrary
+    {
+      shapes.geometric,
+      arrows,
+      calc,
+      intersections,
+      arrows.meta,
+      decorations.markings,
+      positioning,
+      math,
+      angles,
+      quotes,
+      patterns,3d,
+      backgrounds,
+      fillbetween
+    }
+
+\usepackage{chessboard}
+\usepackage{skak}
+
+\makeatletter
+\newcommand{\gettikzxy}[3]{%
+  \tikz@scan@one@point\pgfutil@firstofone#1\relax
+  \edef#2{\the\pgf@x}%
+  \edef#3{\the\pgf@y}%
+  \pgfmathparse{#2/28.4527} \let#2\pgfmathresult;
+  \pgfmathparse{#3/28.4527} \let#3\pgfmathresult;
+}
+\makeatother
+
+
+
+\tikzstyle{arrow} = [thick,-,>=stealth]
+\tikzstyle{myarrow} = [thick,->,>=stealth]
+
+\usepackage{scrextend}
+
+\newcounter{Example}[section]
+\newcommand{\Example}[2]{
+   \begin{small}
+   \stepcounter{Example}
+   \label{item:\theExample}
+   \small{\underline{\textbf{\textit{Exemplo \thesection.\theExample:}}} #1
+     \begin{addmargin}[1em]{2em}% 1em left, 2em right
+       #2
+     \end{addmargin}
+   }
+   \end{small}
+}
+
+\newcounter{Exercise}[section]
+\newcommand{\MyExercise}[1]{
+   \stepcounter{Exercise}
+   \label{exercise:\thesection:\theExercise}
+   \textbf{Exercício \thesection.\theExercise}.
+   \begin{addmargin}[1em]{2em}
+      \begin{small}\input{#1}\end{small}
+   \end{addmargin}
+}
+
+\newcounter{ExamploNo}[section]
+\newcommand{\MyExample}[1]{
+   \stepcounter{ExamploNo}
+   \label{example:\thesection:\theExamploNo}
+   \small{\textbf{Exemplo \thesection.\theExamploNo}}.
+   \begin{addmargin}[1em]{2em}
+      \begin{small}\input{#1}\end{small}
+   \end{addmargin}
+}
+
+
+\newcommand{\Picture}[3]
+{
+   \begin{figure}[H]
+   \label{#3}
+   \begin{center}#1\end{center}
+   \caption{#2.}
+   \end{figure}
+}
+
+
+
+\def\checkmark{
+   \tikz\fill[scale=0.4]
+   (0,.35) -- (.25,0) -- (1,.7) -- (.25,.15)
+   -- cycle;
+}
+
+
+%%% Para fazer listas dinamicas
+\newboolean{WithSolutionOnly}
+\setboolean{WithSolutionOnly}{false}  
+\newcommand{\ListItemLong}[3]
+{
+    \IfFileExists{#1/#2.Solution.tex}
+    {
+       \begin{addmargin}[1em]{2em}% 1em left, 2em right
+          \textbf{#3:}
+          \input{#1/#2.tex}
+          
+          \ListItemTitle             
+          \begin{addmargin}[1em]{2em}% 1em left, 2em right
+              \input{#1/#2.Solution.tex}
+          \end{addmargin}
+
+        \vspace{0.35cm}
+             
+          \ListSolutionTrailer
+        \end{addmargin}
+        \vspace{0.35cm}
+      }
+      {
+         \ifthenelse{\boolean{WithSolutionOnly}}
+         {}
+         {
+             \begin{addmargin}[1em]{2em}% 1em left, 2em right
+                \textbf{#3:}
+                \input{#1/#2.tex}
+              \end{addmargin}
+         }          
+         \vspace{0.35cm}
+      }
+}
+\newcommand{\ListItemTitle}
+{
+   \vspace{0.25cm}
+   \textbf{Solution}:             
+}
+\newcommand{\ListSolutionTrailer}
+{
+   \begin{center}\underline{\hspace{3cm}}\end{center}
+}
+
+\newcommand{\ListItem}[2]
+{
+   \ListItemLong{#1}{#2}{#1.#2}
+}
+
+\usepackage{xargs}
+\newcommandx{\InputIfExists}[2][2=-]
+{
+   \IfFileExists{#1}
+   {
+      \input{#1}
+   }{
+      #2
+   }
+}
+\newcommand{\MakeList}[2]
+{
+   \setcounter{Example}{1}
+   \foreach \file in {#2}
+   {   
+      \ListItem{#1}{\file}
+   }
+}
+
+%\MakeListDyn{\path}{\title}
+\newcommand{\MakeListDyn}[2]
+{
+   \begin{small}
+   \setcounter{Example}{1}
+   \foreach \n in {1,2,...,99}
+   {
+      \IfFileExists{#1/\n.tex}
+      {
+         \ListItemLong{#1}{\n}{#2.\n}
+      } 
+      {
+         \IfFileExists{#1/0\n.tex}
+         {
+            \ListItemLong{#1}{0\n}{#2.\n}
+         }
+         {
+            \IfFileExists{0#1/0\n.tex}
+            {
+               \ListItemLong{0#1}{0\n}{#2.\n}
+            }
+            {
+               \IfFileExists{0#1/\n.tex}
+               {
+                  \ListItemLong{0#1}{\n}{#2.\n}
+               }
+               {
+               }
+            }
+         }
+      }
+   }
+   \end{small}
+}
+
+\newcounter{PicNo}
+\newcommand{\TikzPic}[2]
+{
+   \stepcounter{PicNo}
+   \label{Pic:\thePicNo}
+   \begin{center}
+   \begin{figure}[H]
+   \centering
+   \begin{tikzpicture}
+       #2
+   \end{tikzpicture}
+   \caption{#1}
+   \end{figure}
+   \end{center}
+}
+
+\newcommand{\PDFPic}[3][pic:\thePicNo]
+{
+   \stepcounter{PicNo}
+   \begin{center}
+   \begin{figure}[H]
+   \centering
+   \includegraphics{#3}
+   \caption{#2}
+   \label{#1}
+   \end{figure}
+   \end{center}
+}
+
+\newcommand{\D}[2]
+{
+   \frac{d #1}{d #2}
+}
+\newcommand{\DD}[2]
+{
+   \frac{d^2 #1}{d #2^2}
+}
+\newcommand{\Dn}[3]
+{
+   \frac{d^#3 #1}{d #2^#3}
+}
+
+\newcommand{\Equiv}{\quad\Leftrightarrow\quad}
+\newcommand{\Imply}{\quad\Rightarrow\quad}
+
+
+\usepackage{polynom}
+\polyset{style=C}
+
+\begin{document}
+\begin{small}

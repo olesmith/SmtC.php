@@ -1,0 +1,285 @@
+Matrix_Operation.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{C}}_{i,j}(c)=
+      \begin{pmatrix*}[r]
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix*}
+   $
+};
+
+\node[] at
+(0.1,2.45)
+{
+\small{$i$}
+};
+
+\node[] at
+(0.1,2.1)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.375,2.45)
+{
+\small{$j$}
+};
+
+\node[] at
+(1.375,2.1)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+671 bytes written to: Matrix_Operation.tex
+/usr/local/bin/tikz2svg Matrix_Operation.tex > Matrix_Operation.tex.log &2>1: 0
+Matrix_Permutation.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{P}}_{i,j}=
+      \begin{pmatrix*}[r]
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix*}
+   $
+};
+
+\node[] at
+(-0.1,2.45)
+{
+\small{$i$}
+};
+
+\node[] at
+(-0.1,2.1)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.1749999999999998,2.45)
+{
+\small{$j$}
+};
+
+\node[] at
+(1.1749999999999998,2.1)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+696 bytes written to: Matrix_Permutation.tex
+/usr/local/bin/tikz2svg Matrix_Permutation.tex > Matrix_Permutation.tex.log &2>1: 0
+Matrix_Operations_Mult.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{C}}_{i,j_1}(c_1)
+   \underline{\underline{C}}_{i,j_2}(c_2)
+   =
+      \begin{pmatrix*}[r]
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & c_1 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix*}
+      \begin{pmatrix*}[r]
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c_2 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix*}
+   =
+      \begin{pmatrix*}[r]
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & c_1 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c_2 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix*}
+   $
+};
+
+\node[] at
+(-6.1000000000000005,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(-6.1000000000000005,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(-4.7,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(-4.7,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(-3.400000000000001,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(-3.400000000000001,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(0.05,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(0.05,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.4500000000000002,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(1.4500000000000002,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(2.7499999999999996,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(2.7499999999999996,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(6.55,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(6.55,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(7.95,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(7.95,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(9.25,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(9.25,2.6)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+2882 bytes written to: Matrix_Operations_Mult.tex
+/usr/local/bin/tikz2svg Matrix_Operations_Mult.tex > Matrix_Operations_Mult.tex.log &2>1: 0
+Traceback (most recent call last):
+  File "/usr/local/bin/tikz2svg", line 62, in <module>
+    Latex().Latex_Process_Files()
+  File "/usr/local/Python/Latex/Process.py", line 22, in Latex_Process_Files
+Traceback (most recent call last):
+  File "/usr/local/bin/tikz2svg", line 62, in <module>
+    Latex().Latex_Process_Files()
+  File "/usr/local/Python/Latex/Process.py", line 22, in Latex_Process_Files
+Traceback (most recent call last):
+  File "/usr/local/bin/tikz2svg", line 62, in <module>
+    Latex().Latex_Process_Files()
+  File "/usr/local/Python/Latex/Process.py", line 22, in Latex_Process_Files
+        self.Latex_Process_File(more_than_one,tex_file,n)
+self.Latex_Process_File(more_than_one,tex_file,n)
+  File "/usr/local/Python/Latex/Process.py", line 81, in Latex_Process_File
+  File "/usr/local/Python/Latex/Process.py", line 81, in Latex_Process_File
+        self.Latex_Args_Verbose(),self.Latex_Args_Clean()
+self.Latex_Args_Verbose(),self.Latex_Args_Clean()
+  File "/usr/local/Python/Latex/Run.py", line 123, in Latex_Run_After_Save
+  File "/usr/local/Python/Latex/Run.py", line 123, in Latex_Run_After_Save
+    self.Latex_Process_File(more_than_one,tex_file,n)
+  File "/usr/local/Python/Latex/Process.py", line 81, in Latex_Process_File
+    self.Latex_Args_Verbose(),self.Latex_Args_Clean()
+  File "/usr/local/Python/Latex/Run.py", line 123, in Latex_Run_After_Save
+        self.File_Write(texfile,latex,echo)
+self.File_Write(texfile,latex,echo)
+  File "/usr/local/Python/File/__init__.py", line 98, in File_Write
+  File "/usr/local/Python/File/__init__.py", line 98, in File_Write
+    self.File_Write(texfile,latex,echo)
+  File "/usr/local/Python/File/__init__.py", line 98, in File_Write
+        f=open(fname,"w" )
+f=open(fname,"w" )
+IOErrorIOError: : [Errno 13] Permission denied: '/tmp/Slides/Matrix_Operations_Mult.tex'[Errno 13] Permission denied: '/tmp/Slides/Matrix_Operation.tex'
+
+    f=open(fname,"w" )
+IOError: [Errno 13] Permission denied: '/tmp/Slides/Matrix_Permutation.tex'

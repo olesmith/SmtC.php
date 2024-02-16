@@ -1,0 +1,3 @@
+4803 bytes written to: Lagrange_Fig.tikz.tex
+/usr/local/bin/tikz2svg Lagrange_Fig.tikz.tex > Lagrange_Fig.tikz.tex.log &2>1: 0
+1858 bytes written to: Lagrange.tex

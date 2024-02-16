@@ -1,0 +1,41 @@
+  \tikzmath
+  {
+     \ru=3;
+     \rv=2.5;
+     \angleu=15;
+     \anglev=45;
+     \angleuhat=\angleu+90;
+     \titlet=1.1;
+     \arcsize=0.5;
+     \textpos=0.7;
+  }
+  
+  \coordinate (O) at (0,0);
+  \coordinate (u) at (\angleu:\ru);
+  \coordinate (v) at (\anglev:\rv);
+  \coordinate (uv) at ($(u)+(v)$);
+  
+  \coordinate (uh) at (\angleuhat:\ru);
+  \coordinate (vu) at ($(O)!(v)!(u)$);
+  \coordinate (vuh) at ($(O)!(v)!(uh)$);
+  
+  \draw[-latex] (O) -- (u);
+  \draw[-latex] (O) -- (v);
+  \draw[-latex] (O) -- (uh);
+  \draw[-latex,dotted] (vu) -- (v);
+  \draw[-latex,dotted] (vuh) -- (v);
+  \draw[-latex,dashed] (v) -- +(u);
+  \draw[-latex,dashed] (u) -- +(v);
+  \draw[-latex,dotted] (u) -- +(vuh);
+  
+  \foreach \p/\title in {u/\underline{u},v/\underline{v},uh/\underline{\widehat u}}
+  {
+    \node at ($(O)!\titlet!(\p)$) { $\title$ };
+  }
+
+   \tkzMarkRightAngle[size=0.1,arrows=-latex](u,O,uh);
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](u,O,v);
+  \tkzLabelAngle[pos=\textpos](u,O,v) {\tiny{$\theta$}};
+  
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](v,uv,u);
+  \tkzLabelAngle[pos=\textpos,arrows=-latex](v,uv,u) {\tiny{$\theta$}};

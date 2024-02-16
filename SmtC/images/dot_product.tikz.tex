@@ -1,0 +1,15 @@
+  \tikzmath{\r=3;}
+  \coordinate (O) at (0,0);
+  \coordinate (u) at (20:\r);
+  \coordinate (v) at (70:\r);
+  
+  \draw[-latex] (O) -- (u);
+  \draw[-latex] (O) -- (v);
+  
+  \foreach \p in {u,v}
+  {
+    \node at ($(O)!1.1!(\p)$) { $\underline{\p}$ };
+  }
+
+  \tkzMarkAngle[size=2,arrows=-latex](u,O,v);
+  \tkzLabelAngle[pos=1](u,O,v) {$\theta$};

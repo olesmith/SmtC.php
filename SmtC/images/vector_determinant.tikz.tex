@@ -1,0 +1,58 @@
+  \tikzmath
+  {
+     \ru=3;
+     \rv=2.5;
+     \angleu=15;
+     \anglev=45;
+     \angleuhat=\angleu+90;
+     \titlet=1.1;
+     \arcsize=0.5;
+     \textpos=0.75;
+  }
+  
+  \coordinate (O) at (0,0);
+  \coordinate (u) at (\angleu:\ru);
+  \coordinate (v) at (\anglev:\rv);
+  
+  %Sum of u and v (aparelelogram)
+  \coordinate (uv) at ($(u)+(v)$);
+  
+  %U hat vector
+  \coordinate (uh) at (\angleuhat:\ru);
+  
+  %Projection of v on u
+  \coordinate (vu) at ($(O)!(v)!(u)$);
+  
+  %Projection of v on u hat
+  \coordinate (vuh) at ($(O)!(v)!(uh)$);
+  
+  \coordinate (uvh) at ($(u)+(vuh)$);
+  
+  \draw[-latex] (O) -- (u);
+  \draw[-latex] (O) -- (v);
+  \draw[-latex] (O) -- (uh);
+  \draw[dotted] (vu) -- (v);
+  \draw[dotted] (vuh) -- (v);
+  \draw[dashed] (v) -- +(u);
+  \draw[dashed] (u) -- +(v);
+  \draw[dotted] (u) -- +(vuh);
+  
+  \foreach \p/\title in {u/\underline{u},v/\underline{v},uh/\underline{\widehat u}}
+  {
+    \node at ($(O)!\titlet!(\p)$) { $\title$ };
+  }
+
+   \tkzMarkRightAngle[size=0.1,arrows=-latex](u,O,uh);
+   
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](u,O,v);
+  \tkzLabelAngle[pos=\textpos](u,O,v) {\tiny{$\theta$}};
+  
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](v,uv,u);
+  \tkzLabelAngle[pos=\textpos,arrows=-latex](v,uv,u) {\tiny{$\theta$}};
+  
+  
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](v,O,uh);
+  \tkzLabelAngle[pos=\textpos](v,O,uh) {\tiny{$\frac{\pi}{2}-\theta$}};
+  
+  \tkzMarkAngle[size=\arcsize,arrows=-latex](uv,u,uvh);
+  \tkzLabelAngle[pos=\textpos](uv,u,uvh) {\tiny{$\frac{\pi}{2}-\theta$}};

@@ -1,0 +1,249 @@
+Matrix_Operation.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{C}}_{i,j}(c)=
+      \begin{pmatrix}
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix}
+   $
+};
+
+\node[] at
+(0.1,2.45)
+{
+\small{$i$}
+};
+
+\node[] at
+(0.1,2.1)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.375,2.45)
+{
+\small{$j$}
+};
+
+\node[] at
+(1.375,2.1)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+/usr/bin/pdflatex Matrix_Operation.tex > /tmp/Matrix_Operation.tex.log &2>1: 0
+/usr/bin/pdf2svg Matrix_Operation.pdf Matrix_Operation.svg: 0
+Matrix_Permutation.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{P}}_{i,j}=
+      \begin{pmatrix}
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix}
+   $
+};
+
+\node[] at
+(-0.1,2.45)
+{
+\small{$i$}
+};
+
+\node[] at
+(-0.1,2.1)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.1749999999999998,2.45)
+{
+\small{$j$}
+};
+
+\node[] at
+(1.1749999999999998,2.1)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+/usr/bin/pdflatex Matrix_Permutation.tex > /tmp/Matrix_Permutation.tex.log &2>1: 0
+/usr/bin/pdf2svg Matrix_Permutation.pdf Matrix_Permutation.svg: 0
+Matrix_Operations_Mult.tex:
+\begin{tikzpicture}
+\node[] at
+(0,0)
+{
+   $
+   \underline{\underline{C}}_{i,j_1}(c_1)
+   \underline{\underline{C}}_{i,j_2}(c_2)
+   =
+      \begin{pmatrix}
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & c_1 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix}
+      \begin{pmatrix}
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 0 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c_2 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix}
+   =
+      \begin{pmatrix}
+         1 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots & \ddots & \vdots &  & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & 1 & \cdots & 0 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots & \ddots & \vdots &  & \vdots &  & \vdots\\
+         0 & \cdots & c_1 & \cdots & 1 & \cdots & 0 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots & \ddots & \vdots &  & \vdots\\
+         0 & \cdots & c_2 & \cdots & 0 & \cdots & 1 & \cdots & 0\\
+         \vdots &  & \vdots &  & \vdots &  & \vdots & \ddots & \vdots\\
+         0 & \cdots & 0 & \cdots & 0 & \cdots & 0 & \cdots & 1\\
+      \end{pmatrix}
+   $
+};
+
+\node[] at
+(-6.1000000000000005,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(-6.1000000000000005,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(-4.7,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(-4.7,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(-3.400000000000001,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(-3.400000000000001,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(0.05,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(0.05,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(1.4500000000000002,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(1.4500000000000002,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(2.7499999999999996,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(2.7499999999999996,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(6.55,2.95)
+{
+\small{$i$}
+};
+
+\node[] at
+(6.55,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(7.95,2.95)
+{
+\small{$j_1$}
+};
+
+\node[] at
+(7.95,2.6)
+{
+$\downarrow$
+};
+
+\node[] at
+(9.25,2.95)
+{
+\small{$j_2$}
+};
+
+\node[] at
+(9.25,2.6)
+{
+$\downarrow$
+};
+
+\end{tikzpicture}
+/usr/bin/pdflatex Matrix_Operations_Mult.tex > /tmp/Matrix_Operations_Mult.tex.log &2>1: 0
+/usr/bin/pdf2svg Matrix_Operations_Mult.pdf Matrix_Operations_Mult.svg: 0
