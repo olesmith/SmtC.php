@@ -1,7 +1,6 @@
 <?php
 
 
-
 global $Setup_Path;
 
 include_once("Accessor.php");
