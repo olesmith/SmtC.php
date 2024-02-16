@@ -1,0 +1,119 @@
+*.Regexp
+{
+    color: grey;
+    font-size: xx-small;
+    font-style: oblique;
+}
+DIV.Text_Body
+{
+    width: 99%;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+DIV.Text_Exec_Output_Title
+{
+    color: gray;
+    text-decoration: underline;
+}
+
+DIV.Text_Exec_Output
+{    
+    max-height: 400px;
+    max-width: 600px;
+    width: 99%;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: auto;
+    color: orange;
+}
+
+DIV.Text_Exec_Info
+{
+}
+
+TABLE.Text_Exec_Info
+{
+}
+
+TD.Text_Exec_Info
+{
+    color: grey;
+    font-size: xx-small;
+    font-style: oblique;
+}
+}
+
+DIV.Text_Code
+{
+}
+
+
+PRE.Text_Code
+{
+    max-height: 400px;
+    max-width: 600px;
+    width: 99%;
+    border: 2px solid #DDDDDD;
+    border-radius: 5px;
+    text-align: left;
+    overflow-x: auto;
+    overflow-y: auto;
+    
+    margin: auto;
+}
+
+
+
+OL.Text_List
+{
+    list-style-position: outside;
+	text-align: left;
+    padding: 5px;
+    margin-left: 35px;
+}
+LI.Text_List
+{    
+    color: #555555;
+	text-decoration: none;
+	text-align: left;
+}
+DIV.Text_List
+{    
+    color: #107eed;
+	text-decoration: none;
+	text-align: left;
+    font-style: italic;
+	font-weight: bold;
+}
+
+DIV.Text_File_Info
+{
+    padding-top: 5px;
+    text-decoration: none;
+    font-style: italic;
+	font-weight: bold;
+}
+
+
+*.Text_Child_URL
+{    
+    color: #107eed;
+	text-align: center;
+    font-style: italic;
+	font-weight: bold;
+}
+
+
+*.Display
+{    
+    color: #FF5733;
+	text-align: center;
+    font-style: italic;
+	font-weight: bold;
+}
+

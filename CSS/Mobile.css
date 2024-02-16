@@ -1,0 +1,82 @@
+
+
+*.Mobile_Top
+{
+    width: 75%;
+    margin: auto;
+    self-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    flex-wrap: nowrap;
+}
+
+
+*.Mobile_Top_Logo111
+{
+    display: flex;
+}
+
+*.Mobile_Top_Logo_1
+{
+    display: flex;
+}
+*.Mobile_Top_Logo_2
+{
+    display: flex;
+}
+
+
+
+
+*.Mobile_Top_Titles
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+
+*.Mobile_Top_Title
+{
+    display: flex;
+    align-self: center;
+    color: #2233CC;
+    background: #FFFFFF;
+}
+
+*.Mobile_Top_Title_First
+{    
+    font-size: xx-large;
+}
+
+*.Mobile_Top_Title_Second
+{    
+    font-size: x-large;
+}
+
+
+*.Mobile_Top_Title_Third
+{    
+    font-size: large;
+}
+
+
+
+
+*.Mobile_Bottom_Languages_DIVs
+{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+
+*.Mobile_Bottom_Languages_DIV
+{    
+    display: flex;
+    margin: 5px;
+}
+
